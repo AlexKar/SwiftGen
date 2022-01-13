@@ -106,7 +106,12 @@ extension ParserCLI {
       description: "generate code for custom yaml configuration files",
       pathDescription: "YAML files (or directories that contain them) to parse."
     ),
-
+    .init(
+        parserType: Directories.Parser.self,
+        name: "directories",
+        description: "generate code for referencing specified directories",
+        pathDescription: "Directories to recursively search."
+    ),
     // Deprecated
     .init(
       parserType: InterfaceBuilder.Parser.self,
